@@ -270,7 +270,7 @@
         <div>
             <label for="backupUrl">Enter Backup Data URL:</label>
             <textarea id="backupUrl" name="backupUrl" rows="4" cols="80" placeholder="https://example.com/backup">
-                https://raw.githubusercontent.com/Untouchable2k/0xbtc_guild/main/data/0xbtc_guild_website_imported_data.txt
+                https://raw.githubusercontent.com/Untouchable2k/0xBTC_Guild_Web/main/data/0xbtc_guild_website_imported_data.txt
             </textarea>
         </div>
         <button type="button"  onclick="myOnClickFunction()">Submit</button>
@@ -295,7 +295,7 @@
 
         lastBlkTo = 12245663;
         interuptererer = 100;
-        backupUrlValue22 = "https://raw.githubusercontent.com/Untouchable2k/0xbtc_guild/main/data/0xbtc_guild_website_imported_data.txt";
+        backupUrlValue22 = "https://raw.githubusercontent.com/Untouchable2k/0xBTC_Guild_Web/main/data/0xbtc_guild_website_imported_data.txt";
         async function myOnClickFunction() {
             // Your custom JavaScript code here
             if(rpcUrl.value != providerURL){
@@ -309,7 +309,7 @@
             
             const backupUrlValue = document.getElementById("backupUrl").value.trim();
             console.log("Testing: ", backupUrlValue);
-            if(backupUrlValue !== "https://raw.githubusercontent.com/Untouchable2k/0xbtc_guild/main/data/0xbtc_guild_website_imported_data.txt" || backupUrlValue22 !== backupUrlValue){
+            if(backupUrlValue !== "https://raw.githubusercontent.com/Untouchable2k/0xBTC_Guild_Web/main/data/0xbtc_guild_website_imported_data.txt" || backupUrlValue22 !== backupUrlValue){
                 interuptererer = 99;
                 backupUrlValue22 = backupUrlValue;
 
