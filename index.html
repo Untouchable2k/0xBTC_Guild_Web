@@ -398,12 +398,13 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
             while (true && interuptererer == 100) {
                 
                 //accountAddressElement2.innerHTML = `1% loaded to get current 0xBitcoin MinersGuild holders`;
-                var percentage = 1.0*(endBlk2 - realStart) / (realEnd - realStart) * 100
-                LoadingInfoElement.innerHTML = `${percentage.toFixed(2)}% of logs loaded.`;
                 if(startBlk2 - endBlk > 0){
                     break;
                     
                 }   
+		    
+                var percentage = 1.0*(endBlk2 - realStart) / (realEnd - realStart) * 100
+                LoadingInfoElement.innerHTML = `${percentage.toFixed(2)}% of logs loaded.`;
                 if(endBlk2 > endBlk){
                     endBlk2 = endBlk;
                 }
