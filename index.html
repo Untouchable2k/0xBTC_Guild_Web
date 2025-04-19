@@ -550,7 +550,7 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
                         console.log('Address:', address);
                         console.log('Data:', data);
                     }
-                    var zmaxL = nonZeroHolders.length;
+	   	    var zmaxL = nonZeroHolders.size;
 		    var zcurrent = 0;
                     for (const [recipient, data] of nonZeroHolders) {
 			zcurrent=zcurrent+1;
