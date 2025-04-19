@@ -555,7 +555,7 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
                     for (const [recipient, data] of nonZeroHolders) {
 			zcurrent=zcurrent+1;
                		var percentage = 1.0*(zcurrent - 0) / (zmaxL - 0) * 100
-            		LoadingInfoElement.innerHTML = `100% Logs loaded! ${percentage}% of double checking balances done.`;
+            		LoadingInfoElement.innerHTML = `100% Logs loaded! ${percentage.toFixed(2)}% of double checking balances at current block height.`;
                     if(interuptererer != 100){
                         break;
                     }
