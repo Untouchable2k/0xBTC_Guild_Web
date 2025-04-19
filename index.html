@@ -148,8 +148,8 @@
       </style>
 </head>
 <body>
-    <h2>Guild Holders</h2>
-    <h2><div class="LoadingInfo" id="LoadingInfo">0% Loaded to get Current Guild Holders</div></h2>
+    <h2>0xBitcoin MinersGuild Holders</h2>
+    <h2><div class="LoadingInfo" id="LoadingInfo">0% Loaded to get current 0xbitcoin MinersGuild Holders</div></h2>
     <!-- Added a table to display the Map values -->
     <div id="holdersTable">
         <table border="1">
@@ -397,9 +397,9 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
             runs = 0;
             while (true && interuptererer == 100) {
                 
-                //accountAddressElement2.innerHTML = `1% Loaded to get Current Guild Holders`;
+                //accountAddressElement2.innerHTML = `1% loaded to get current 0xBitcoin MinersGuild holders`;
                 var percentage = 1.0*(endBlk2 - realStart) / (realEnd - realStart) * 100
-                LoadingInfoElement.innerHTML = `${percentage}% of logs loaded.`;
+                LoadingInfoElement.innerHTML = `${percentage.toFixed(2)}% of logs loaded.`;
                 if(startBlk2 - endBlk > 0){
                     break;
                     
@@ -429,7 +429,7 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
             await checkEverythingsLeft_Balance();
             console.log("checked everythign balance!");
             await saveDataToWebsite();
-            LoadingInfoElement.innerHTML = `100% Loaded to get Current Guild Holders, all data current`;
+            LoadingInfoElement.innerHTML = `100% loaded of all logs and checks, all data current`;
 
             const downloadButton = document.getElementById('downloadButton');
             downloadButton.disabled = false; // Enable the button
