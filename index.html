@@ -402,9 +402,10 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
                     break;
                     
                 }   
-		    
+		    if(runs > 1){
                 var percentage = 1.0*(endBlk2 - realStart) / (realEnd - realStart) * 100
                 LoadingInfoElement.innerHTML = `${percentage.toFixed(2)}% of logs loaded.`;
+		    }
                 if(endBlk2 > endBlk){
                     endBlk2 = endBlk;
                 }
