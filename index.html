@@ -493,11 +493,11 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
                     
                     while (retries <= maxRetries) {
                         try {
-                            await sleep(retries === 0 ? 2 : 90); // Sleep 2ms first try, 90s on retry
+                            await sleep(retries === 0 ? 1 : 40); // Sleep 2ms first try, 90s on retry
                             const userBalance = await contractGuild.balanceOf(recipient);
                             
                             if (userBalance.gt(0)) {
-                                await sleep(3);
+                                await sleep(1);
                                 var userBalance0xBTC = await contractGuildFinal._vaultOutputAmount(userBalance, "0xB6eD7644C69416d67B522e20bC294A9a9B405B31");
                     
                                
@@ -518,7 +518,7 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
                                 console.error(`Failed after ${maxRetries + 1} attempts`);
                                 break;
                             }
-                            console.log("Sleep 90 seconds trying again");
+                            console.log("Sleep 40 seconds trying again");
                             retries++;
                         }
                     }
@@ -566,7 +566,7 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
                     
                     while (retries <= maxRetries) {
                         try {
-                            await sleep(2); // Sleep 2ms first try, 90s on retry
+                            await sleep(1); // Sleep 2ms first try, 90s on retry
                             if(retries != 0){
                                 for(var zzz = 0; zzz<45; zzz++){
                                     if(interuptererer == 99){
@@ -578,7 +578,7 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
                             const userBalance = await contractGuild.balanceOf(recipient);
                             console.log("Final check of User: ",recipient, " and MinersGuildBalance of: ",ethers.utils.formatUnits(userBalance, 8) )
                             if (userBalance.gt(0)) {
-                                await sleep(3);
+                                await sleep(1);
                                 var userBalance0xBTC = await contractGuildFinal._vaultOutputAmount(userBalance, "0xB6eD7644C69416d67B522e20bC294A9a9B405B31");
                     
                                 console.log("2Final check of User: ",recipient, " and 0xBitcoin Balance of: ",ethers.utils.formatUnits(userBalance0xBTC, 8) )
