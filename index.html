@@ -399,7 +399,7 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
                 
                 //accountAddressElement2.innerHTML = `1% Loaded to get Current Guild Holders`;
                 var percentage = 1.0*(endBlk2 - realStart) / (realEnd - realStart) * 100
-                LoadingInfoElement.innerHTML = `${percentage}% Loaded to get Current Guild Holders`;
+                LoadingInfoElement.innerHTML = `${percentage}% of logs loaded.`;
                 if(startBlk2 - endBlk > 0){
                     break;
                     
@@ -423,7 +423,7 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
                 runs = runs + 1;
             }
 
-            LoadingInfoElement.innerHTML = `100% Loaded to get Current Guild Holders, double checking balances now`;
+            LoadingInfoElement.innerHTML = `100% Logs loaded! 0% of double checking balances done.`;
             await checkAllReceiptsForBalance();
             console.log("Checking everything balance");
             await checkEverythingsLeft_Balance();
@@ -550,8 +550,12 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
                         console.log('Address:', address);
                         console.log('Data:', data);
                     }
-
+                    var zmaxL = nonZeroHolders.length;
+		    var zcurrent = 0;
                     for (const [recipient, data] of nonZeroHolders) {
+			zcurrent=zcurrent+1;
+               		var percentage = 1.0*(zcurrent - 0) / (zmaxL - 0) * 100
+            		LoadingInfoElement.innerHTML = `100% Logs loaded! ${percentage}% of double checking balances done.`;
                     if(interuptererer != 100){
                         break;
                     }
