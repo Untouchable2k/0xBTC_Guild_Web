@@ -390,7 +390,7 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
             backupUrlValue22 = rpcUrl.value;
             provider = new ethers.providers.JsonRpcProvider(rpcUrl.value);
             endBlk = await provider.getBlockNumber();
-            endBlk2 = startBlk + 9999;
+            endBlk2 = startBlk + 999;
             startBlk2 = startBlk;
             var realStart = startBlk2;
             var realEnd = endBlk;
@@ -414,7 +414,7 @@ const LoadingInfoElement = document.getElementById('LoadingInfo');
                 await getTransferLogs(startBlk2, endBlk2);
                 await sleep(2);
                 startBlk2 = endBlk2 + 1;
-                endBlk2 = startBlk2 + 9999;
+                endBlk2 = startBlk2 + 999;
                 if(runs%20==0){
                     console.log("20th run checking and saving");
                     await checkAllReceiptsForBalance();
